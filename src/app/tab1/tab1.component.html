@@ -1,0 +1,17 @@
+<section>
+  <div class="row">
+    <div class="col-md-4">
+      <h3>ngStyle/ngClass</h3>
+      <label>Enter Text Here: </label>
+      <input type="text" [(ngModel)]="title" placeholder="Type 'new' or 'old' ">  
+      <p [ngStyle]="{color:title=='new'?'green': title=='old'?'blue':''}">
+        Below text shows ngStyle property <br/>"{{ title }}"!
+      </p>
+      <p [ngClass]="title =='new'?'italicStyle': title =='old'?'boldStyle':'normalStyle'">
+        Below text shows ngClass property <br/> "{{ title }}"!
+      </p>
+    </div>
+  </div>
+</section>
+<button routerLink='tab1Child'>Tab1 child</button>
+<router-outlet></router-outlet>

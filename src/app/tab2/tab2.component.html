@@ -1,0 +1,14 @@
+<div class="showimages">
+          <h3>TemplateRef</h3>
+          <select #selectedOpt (change)="showImages($event,selectedOpt)">
+          <option value="animals">Animals</option>
+          <option value="birds">Birds</option>
+          <option value="plants">Plants</option>
+          <option [selected]="true">Select</option>
+        </select>
+        <div class="images">
+        <img *ngIf="selectedOpt.value=='animals'" src="https://cdn.pixabay.com/photo/2016/05/02/13/17/wildlife-1367217_960_720.jpg" width="300" height="200">
+        <img *ngIf="selectedOpt.value=='birds'" src="https://images.unsplash.com/photo-1549608276-5786777e6587?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1500&q=80" width="300" height="200">
+        <img *ngIf="selectedOpt.value=='plants'" src="https://media.treehugger.com/assets/images/2016/07/green-forest-trees.jpg.860x0_q70_crop-scale.jpg" width="300" height="200">
+        </div>
+        </div>
